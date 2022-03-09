@@ -10,13 +10,13 @@ public class Objekti : MonoBehaviour {
 	public GameObject atraPalidziba;
 	public GameObject autobuss;
 
-
+	[HideInInspector]
 	public Vector2 atkrKord;
 	[HideInInspector]
 	public Vector2 autoKord;
 	[HideInInspector]
 	public Vector2 atraKord;
-	[HideInInspector]
+
 
 	public AudioSource skanasAvots;
 
@@ -30,11 +30,9 @@ public class Objekti : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		atkrKord = atkritumuMasina.GetComponent<RectTransform> ().localPosition;
+		autoKord = autobuss.GetComponent<RectTransform> ().localPosition;
+		atraKord = atraPalidziba.GetComponent<RectTransform> ().localPosition;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
